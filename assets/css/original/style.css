@@ -1,0 +1,421 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: duty;
+    src: url('../fonts/Ikaros-Regular.otf');
+}
+
+@font-face {
+    font-family: caviar;
+    src: url('../fonts/CaviarDreams.ttf');
+}
+
+@font-face {
+    font-family: caviar-bold;
+    src: url('../fonts/Caviar Dreams Bold.ttf');
+}
+
+:root {
+    --main-color-sun: #f8a45a;
+    --main-color: black;
+    --second-color: white;
+    --third-color: lightgreen;
+    --fourth-color: green;
+    --clickable: pointer;
+}
+
+.ff {
+    display: flex;
+}
+.ffc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ffa {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.fpa {
+    position: absolute;
+}
+.fpr {
+    position: relative;
+}
+.fsc {
+    width: 100vw;
+    height: 100vh;
+}
+
+main {
+    position: relative;
+    overflow: hidden;
+    padding-top: 50px;
+}
+
+section {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Content */
+.content {
+    z-index: 5;
+    position: relative;
+    width: 100vw;
+}
+
+#main::before {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    top: 50px;
+    left: 10vw;
+    background-color: var(--main-color-sun);
+    z-index: 2;
+}
+#main .content {
+    font-family: duty;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+}
+#main .content * {
+    display: inline-block;
+    text-align: center;
+}
+#main .content h1 {
+    margin-top: 10vh;
+    font-size: 50px;
+}
+
+#second .content-box-1 {
+    border-radius: 20px;
+    width: 50vw;
+    height: 40vh;
+    background-color: var(--second-color);
+    flex-direction: column;
+    box-shadow: 0px 0px 10px var(--third-color);
+    transition: 1s;
+}
+#second .content-box-1:hover {
+    box-shadow: 0px 0px 15px var(--third-color);
+}
+#second .content-box-1 h1 {
+    margin: 20px 0px;
+    font-family: caviar-bold;
+}
+#second .content-box-1 p {
+    font-size: 18px;
+    text-align: justify;
+    padding: 0px 30px;
+    font-family: caviar;
+}
+#second .content-box-1 .exp table {
+    padding: 10px 0px;
+    text-align: center;
+}
+#second .content-box-1 .exp th {
+    min-width: 11vw;
+}
+#second .content-box-1 .exp td {
+    position: relative;
+    padding: 5px;
+    border-radius: 5px;
+    transition: 1s;
+}
+#second .content-box-1 .exp td span {
+    position: relative;
+    z-index: 3;
+    transition: 0.5s;
+    pointer-events: none;
+    font-family: caviar-bold;
+}
+#second .content-box-1 .exp td::after {
+    content: '';
+    position: absolute;
+    display: flex;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    z-index: 2;
+    transition: 1s;
+    pointer-events: none;
+    border-radius: 5px;
+    background-color: var(--third-color);
+}
+#second .content-box-1 .exp td:hover::after
+{
+    width: 100% !important;
+    background-color: var(--main-color) !important;
+}
+#second .content-box-1 .exp td:hover span {
+    color: var(--second-color);
+}
+#second .content-box-1 .exp td.show::before {
+    content: attr(data-exp);
+    position: absolute;
+    padding: 7px 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    top: 105%;
+    left: calc(50% - 14px);
+    background-color: var(--main-color);
+    color: var(--second-color);
+    z-index: 9;
+    box-shadow: none;
+}
+
+#second .content-box-1 .exp td.exp-1::after {
+    width: 20%;
+}
+#second .content-box-1 .exp td.exp-2::after {
+    width: 40%;
+}
+#second .content-box-1 .exp td.exp-3::after {
+    width: 60%;
+}
+#second .content-box-1 .exp td.exp-4::after {
+    width: 80%;
+}
+#second .content-box-1 .exp td.exp-5::after {
+    width: 100%;
+}
+
+/* third */
+
+#third .content {
+    height: 100vh;
+}
+#third .wrap {
+    height: 100vh;
+    max-width: 1100px;
+    width: 1100px;
+}
+#third .content-box {
+    width: 40vw;
+    height: 50vh;
+    border-radius: 20px;
+    transition: 2s;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    font-size: 30px;
+    max-width: 450px;
+    background-color: var(--second-color);
+}
+#third .content-box:hover {
+    transform: scale(1.01);
+}
+#third:hover .content-box-1,
+#third:hover .content-box-2 {
+    -webkit-box-shadow: -10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: -10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+#third .content-box-1:hover,
+#third .content-box-2:hover {
+    -webkit-box-shadow: -20px 20px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -20px 20px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: -20px 20px 5px 0px rgba(0,0,0,0.75);
+}
+
+#third .content-box:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    transition: 2s;
+    pointer-events: none;
+    box-shadow: 10px -10px 5px 0px rgb(255 255 255 / 50%);
+}
+#third .content-box:hover:before {
+    box-shadow: 20px -20px 5px 0px rgb(255 255 255 / 50%);
+}
+
+#third:hover .content-box {
+    background-color: rgb(105 183 105) !important;
+    color: var(--second-color) !important;
+}
+#third:hover .content-box img {
+    filter: invert(1);
+}
+#third .content-box h1 {
+    margin: 20px 0px;
+    font-family: caviar-bold;
+}
+#third .content-box h1 span {
+    display: none;
+    margin-left: 10px;
+}
+#third .content-box h1 span img {
+    height: 30px;
+    width: auto;
+    transition: 1s;
+}
+#third .content-box p {
+    font-family: caviar;
+    font-size: 17px;
+    padding: 0px 20px;
+    text-align: justify;
+}
+#third .content-box li {
+    cursor: var(--clickable);
+}
+#third .content-box-1 ul {
+    font-family: caviar-bold;
+    font-size: 18px;
+    text-align: left;
+    margin-right: auto;
+    padding: 20px 40px;
+}
+#third .content-box-2 ul {
+    font-family: caviar;
+    font-size: 16px;
+    text-align: left;
+    margin-right: auto;
+    padding: 10px 25px;
+}
+
+/* footer */
+
+footer {
+    position: fixed;
+    z-index: 10;
+    bottom: 20px;
+    left: 0px;
+    width: 100vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.footer-section {
+    position: absolute;
+    top: 90vh;
+    height: 10vh;
+    width: 100vw;
+}
+#goBottom {
+    margin-right: 50px;
+    padding: 5px 10px;
+    margin-right: 50px;
+    background: green;
+    border-radius: 10px;
+    cursor: var(--clickable);
+}
+#goBottom img {
+    height: 50px;
+    width: auto;
+    filter: invert(1);
+}
+
+.loop-jump {
+    animation: jump 2s infinite;
+}
+
+.all-links {
+    display: flex;
+    padding-left: 50px;
+    cursor: var(--clickable);
+}
+
+div.links {
+    display: flex;
+    margin: 0px 10px;
+    padding: 5px;
+    border-radius: 10px;
+    background: rgba(0, 128, 0, 0.5);
+    transition: 1s;
+    transform: translateY(200%);
+}
+
+div.links#links,
+div.links.active {
+    transform: translateY(0%) !important;
+}
+
+div.links:hover {
+    background: green;
+}
+div.links img {
+    height: 50px;
+    filter: invert(1);
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    #third .content .wrap {
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    #third .content-box h1 {
+        font-size: 30px;
+    }
+    #third .content-box {
+        height: 40px !important;
+        padding-bottom: 20px;
+        width: 90vw !important;
+        overflow: hidden;
+        cursor: var(--clickable);
+    }
+    #third .content-box-2 {
+        margin-top: 40px !important;
+        margin-bottom: 100px !important;
+    }
+    #third:hover .content-box-1,
+    #third:hover .content-box-2,
+    #third .content-box-1:hover,
+    #third .content-box-2:hover {
+        -webkit-box-shadow: none !important;
+        -moz-box-shadow: none !important;
+        box-shadow: none !important;
+    }
+    #third .content-box:hover {
+        transform: none !important;
+        height: unset !important;
+    }
+    header ul li {
+        font-size: 18px;
+        padding: 0px 10px;
+    }
+    #second .content-box-1 {
+        width: 90vw !important;
+    }
+    #second td span, #second p {
+        font-size: 14px !important;
+    }
+    #second h1, #third h1 {
+        margin: 10px 0px !important;
+    }
+    .all-links {
+        padding-left: 10px !important;
+    }
+    div.links img {
+        height: 30px !important;
+    }
+    #goBottom {
+        margin-right: 10px !important;
+    }
+
+    #third .content-box h1 span {
+        display: flex !important;
+    }
+}

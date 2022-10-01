@@ -1,0 +1,73 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/* menu */
+
+:root {
+    --sky-color: aquamarine;
+    --sky2-color: rgb(0 188 226);
+}
+
+header {
+    position: fixed;
+    background-color: var(--sky-color);
+    height: 50px;
+    width: 100vw;
+    z-index: 10;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+header ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style-type: none;
+}
+header ul li {
+    padding: 0px 20px;
+    height: 50px;
+    font-size: 25px;
+    font-family: caviar-bold;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+    cursor: var(--clickable);
+}
+header.main {
+    background-color: var(--main-color);
+    color: var(--second-color);
+}
+header.second {
+    background-color: var(--second-color) !important;
+}
+header.third {
+    background-color: var(--fourth-color) !important;
+}
+
+header li:hover {
+    background-color: var(--third-color) !important;
+}
+header.main ul:nth-child(1) li.active {
+    background-color: var(--sky-color) !important;
+    color: var(--main-color) !important;
+}
+header.main ul:nth-child(2) li.active {
+    background-color: var(--sky2-color) !important;
+    color: var(--main-color) !important;
+}
+header.second li.active {
+    background-color: var(--main-color) !important;
+    color: var(--second-color) !important;
+}
+header.third li.active {
+    background-color: var(--main-color) !important;
+    color: var(--second-color) !important;
+}
