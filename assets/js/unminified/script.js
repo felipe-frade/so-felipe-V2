@@ -112,12 +112,12 @@ function alert_css(event){
             inactive('main')
             clear_header()
             header.classList.add("second")
-            document.getElementById("item-about").classList.add("active")
+            document.getElementById("item-developer").classList.add("active")
         } else if(isVisible(document.getElementById('third'))){
             active('main')
             clear_header()
             header.classList.add("third")
-            document.getElementById("item-developer").classList.add("active")
+            document.getElementById("item-about").classList.add("active")
         } else if(isVisible(document.getElementById('main'))){
             active('main')
             clear_header()
