@@ -26,26 +26,26 @@
 <body>
     <header>
         <ul id="menu">
-            <li id="item-home" data-link="main" data-ancora="second" 
+            <li id="item-home" data-link="main" data-ancora="third" 
                 data-pt="Inicial"
                 data-en="Home"
                 class="ffc"
             >
                 Home
             </li>
-            <li id="item-developer" data-link="second" data-ancora="third" 
-                data-pt="Desenvolvedor"
-                data-en="Developer"
-                class="ffc"
-            >
-                Developer
-            </li>
-            <li id="item-about" data-link="third" data-ancora="main" 
+            <li id="item-about" data-link="third" data-ancora="second" 
                 data-pt="Sobre"
                 data-en="About"
                 class="ffc"
             >
                 About
+            </li>
+            <li id="item-developer" data-link="second" data-ancora="main" 
+                data-pt="Desenvolvedor"
+                data-en="Developer"
+                class="ffc"
+            >
+                Developer
             </li>
         </ul>
         <ul>
@@ -54,7 +54,7 @@
         </ul>
     </header>
     <main>
-        <section class="fsc" id="main" data-ancora="second">
+        <section class="fsc" id="main" data-ancora="third">
             <div id="mountain" class="fpa ff"></div>
             <div class="bg bg-main" id="bg-main">
             </div>
@@ -79,42 +79,7 @@
             <div class="bg-layer2"></div>
             <div class="bg-layer3"></div>
         </section>
-        <section class="fsc" id="second" data-ancora="third">
-            <div class="bg bg-second fpa fsc" id="bg-second"></div>
-            <div class="content ffc fsc">
-                <div class="content-box-1 ffc">
-                    <h1 data-pt="Sobre desenvolvimento de software"
-                        data-en="About Software Development">
-                        About Software Development
-                    </h1>
-                    <p data-pt="
-                        Então, eu poderia trazer um texto enorme sobre minhas experiências.
-                        Mas decidi trazer isso. Você pode achar o texto que falei em outra seção.
-                    " data-en="
-                        So, sure I could have bring a large text of my experiences in Software Development, 
-                        but instead decided to bring this. 
-                        You can find such text at some sections below.
-                    ">
-                        So, sure I could have bring a large text of my experiences in Software Development, 
-                        but instead decided to bring this. 
-                        You can find such text at some sections below.
-                    </p>
-                    <div class="exp">
-                        <table id="table-exp">
-                            <thead>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                            </thead>
-                            <tbody></tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-section" id="footerSecond"></div>
-        </section>
-        <section class="fsc" id="third" data-ancora="main">
+        <section class="fsc" id="third" data-ancora="second">
             <div class="bg bg-third fpa fsc">
                 <div class="lamp object">
                     <div class="bulb1"></div>
@@ -133,7 +98,7 @@
                                 <img src="assets/icons/plus-solid.svg" alt="Plus">
                             </span>
                         </h1>
-                        <p data-pt="
+                        <p id="stage-text" data-pt="
                             Minha carreira pode ser divida em três pontos.
                             Clique nos itens abaixo para saber mais.
                         " data-en="
@@ -163,7 +128,6 @@
                                 Full +
                             </li>
                         </ul>
-                        <p id="stage-text"></p>
                     </div>
                     <div class="content-box content-box-2">
                         <h1 data-pt="Sobre mim" data-en="About me" class="ffc">
@@ -172,57 +136,75 @@
                                 <img src="assets/icons/plus-solid.svg" alt="Plus">
                             </span>
                         </h1>
-                        <p>
-                            <ul>
-                                <strong>
+                        <ul>
+                            <strong>
+                                <p>
                                     <li 
                                         data-pt="Atualmente estou à procura de trabalhos freelancers;" 
                                         data-en="I am currently looking for freelance jobs;">
                                         I am currently looking for freelance jobs;
                                     </li>
-                                </strong>
-                                <li 
-                                    data-pt="Sou uma pessoa criativa e esforçada;" 
-                                    data-en="I am a creative and hardworking person;">
-                                    I am a creative and hardworking person;
-                                </li>
-                                <li 
-                                    data-pt="Consigo pensar fora da caixinha e isso geralmente me destaca;" 
-                                    data-en="I can think outside the box and that usually sets me apart;">
-                                    I can think outside the box and that usually sets me apart;
-                                </li>
-                                <li 
-                                    data-pt="Tenho facilidade em aprender lógicas diferentes e costumo me divertir com elas;" 
-                                    data-en="I find it easy to learn different logics and I usually have fun with them;">
-                                    I find it easy to learn different logics and I usually have fun with them;
-                                </li>
-                                <li 
-                                    data-pt="Gosto de desafios;" 
-                                    data-en="I like challenges;">
-                                    I like challenges;
-                                </li>
-                                <li 
-                                    data-pt="Tenho bom domínio do inglês;" 
-                                    data-en="I have a good command of English;">
-                                    I have a good command of English;
-                                </li>
-                            </ul>
-                            <ul>
-                                <li 
-                                    data-pt="Sou um pouco 'teimoso';" 
-                                    data-en="I'm a little 'stubborn';">
-                                    I'm a little 'stubborn';
-                                </li>
-                                <li 
-                                    data-pt="Por vezes posso ser um pouco esquecido e estabanado;" 
-                                    data-en="Sometimes I can be a little forgetful and clumsy;">
-                                    Sometimes I can be a little forgetful and clumsy;
-                                </li>
-                            </ul>
-                        </p>
+                                </p>
+                            </strong>
+                            <li 
+                                data-pt="Sou uma pessoa criativa e esforçada;" 
+                                data-en="I am a creative and hardworking person;">
+                                I am a creative and hardworking person;
+                            </li>
+                            <li 
+                                data-pt="Tenho facilidade em aprender lógicas diferentes;" 
+                                data-en="I find it easy to learn different logics;">
+                                I find it easy to learn different logics;
+                            </li>
+                            <li 
+                                data-pt="Gosto de desafios;" 
+                                data-en="I like challenges;">
+                                I like challenges;
+                            </li>
+                            <li 
+                                data-pt="Tenho bom domínio do inglês;" 
+                                data-en="I have a good command of English;">
+                                I have a good command of English;
+                            </li>
+                        </ul>
+                        <ul>
+                            <li 
+                                data-pt="Sou um pouco 'teimoso';" 
+                                data-en="I'm a little 'stubborn';">
+                                I'm a little 'stubborn';
+                            </li>
+                            <li 
+                                data-pt="Por vezes posso ser um pouco esquecido e estabanado;" 
+                                data-en="Sometimes I can be a little forgetful and clumsy;">
+                                Sometimes I can be a little forgetful and clumsy;
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
+        </section>
+        <section class="fsc" id="second" data-ancora="main">
+            <div class="bg bg-second fpa fsc" id="bg-second"></div>
+            <div class="content ffc fsc">
+                <div class="content-box-1 ffc">
+                    <h1 data-pt="Sobre desenvolvimento de software"
+                        data-en="About Software Development">
+                        About Software Development
+                    </h1>
+                    <div class="exp">
+                        <table id="table-exp">
+                            <thead>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-section" id="footerSecond"></div>
         </section>
         <!-- <section class="fsc" id="fourth" data-ancora="main">
             <div class="bg bg-fourth"></div>

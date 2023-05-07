@@ -108,15 +108,15 @@ function alert_css(event){
     }
 
     function update_header(){
-        if(isVisible(document.getElementById('third'))){
+        if(isVisible(document.getElementById('second'))){
             inactive('main')
             clear_header()
-            header.classList.add("third")
+            header.classList.add("second")
             document.getElementById("item-about").classList.add("active")
-        } else if(isVisible(document.getElementById('second'))){
+        } else if(isVisible(document.getElementById('third'))){
             active('main')
             clear_header()
-            header.classList.add("second")
+            header.classList.add("third")
             document.getElementById("item-developer").classList.add("active")
         } else if(isVisible(document.getElementById('main'))){
             active('main')

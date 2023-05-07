@@ -6,7 +6,7 @@
         // { key: '0', type: 'span', value: 'HTML', color: 'orange' },
         { key: 'git', type: 'img', value: 'assets/icons/github.png', alt: 'Github', invert: true, exp: 3 },
         { key: 'js', type: 'img', value: 'assets/icons/javascript.png', alt: 'JavaScript', invert: true, exp: 4 },
-        { key: 'rn', type: 'img', value: 'assets/icons/react-native.png', alt: 'React-native', invert: true, exp: 2 },
+        { key: 'rn', type: 'img', value: 'assets/icons/react-native.png', alt: 'React', invert: true, exp: 2 },
         { key: 'html', type: 'img', value: 'assets/icons/html-edited.png', alt: 'HTML', invert: true, exp: 4 },
         { key: 'css', type: 'img', value: 'assets/icons/css-edited.png', alt: 'CSS', invert: true, exp: 4 },
         { key: 'ts', type: 'img', value: 'assets/icons/typescript.png', alt: 'TypeScript', invert: true, exp: 4 },
@@ -143,15 +143,15 @@
             }
         })
         const tds = document.querySelectorAll("#table-exp tbody td")
-        tds.forEach(td => {
-            td.onclick = function(el) {
-                const show = el.target.classList.contains("show")
-                tds.forEach((td) => td.classList.remove("show"))
-                if(!show){
-                    el.target.classList.add("show")
-                }
-            }
-        })
+        // tds.forEach(td => {
+        //     td.onclick = function(el) {
+        //         const show = el.target.classList.contains("show")
+        //         tds.forEach((td) => td.classList.remove("show"))
+        //         if(!show){
+        //             el.target.classList.add("show")
+        //         }
+        //     }
+        // })
     }
 
     create_sky()
